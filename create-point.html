@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar um ponto de coleta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/create-point.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+    
+</head>
+<body>
+    <div id="page-create-point">
+
+            <header>
+                <img src="/assets/logo.svg" alt="Logomarca"> <!--LOGO ECOLETA-->
+                <a href="#">
+                    <span></span>
+                    Voltar para home
+                </a> <!-- LINK -->
+            </header>
+
+            <form action="">
+
+                <h1>Cadastro do ponto de coleta</h1>
+
+                <fieldset> <!--Agrupa dados da entidade e íntens de coleta-->
+                    <legend>
+                        <h2>Dados da entidade</h2>
+                    </legend>
+
+                    <div class="field"> <!--Criando os campos de preenchimento-->
+                        <label for="name">Nome da entidade</label> <!--Nome do campo-->
+                        <input type="text" name="name"> <!--Entrada de dados-->
+                    </div>
+
+                    <div class="field-group"> <!--Agrupa os campos-->
+                        
+                        <div class="field">
+                            <label for="adress">Endereço</label>
+                            <input type="text" name="adress">
+                        </div>
+
+                        <div class="field">
+                            <label for="adress2">Número/Complemento</label>
+                            <input type="text" name=adress2>
+                        </div>
+
+                    </div>
+
+                    <!---------------------------------------------------------------->
+
+                    <div class="field-group"> <!--Agrupa os campos-->
+                        
+                        <div class="field">
+                            <label for="state">Estado</label>
+                            <select name="uf">
+                                <option value="">Selecione o Estado</option>
+                            </select>
+
+                            
+                        </div>
+
+                        <div class="field">
+                            <label for="city">Cidade</label>
+                            <!--Só vai ser possível colocar a cidade depois do estado-->
+                            <select name="city" disabled> 
+                                <option value="">Selecione a Cidade</option>
+                            </select>
+
+                            <input type="hidden" name="state"> <!--Esconder o nome do estado-->
+                        </div>
+                        
+                    </div>
+
+                </fieldset>
+
+                <!-- <fieldset>
+                    <legend>
+                        <h2>Ítens de coleta</h2>
+                    </legend>
+                </fieldset> -->
+
+                <button type="submit">Cadastrar ponto de coleta</button>
+            </form>
+
+    </div>
+    
+    <script src="/scripts/create-point.js"></script>
+</body>
+</html>
