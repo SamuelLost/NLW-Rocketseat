@@ -106,3 +106,53 @@ form button { /*Botão de cadastrar*/
 form button:hover {
     background-color: #2fb86e;
 }
+
+/*Grade de ítens*/
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*Fração para criar as colunas*/
+    gap: 16px; /*Separação de grid*/
+}
+
+.items-grid li {
+    background-color: #f5f5f5;
+    list-style: none; /*Retira os pontinhos*/
+
+    border: 2px solid #f5f5f5;
+    border-radius: 8px;
+    
+    height: 180px;
+    
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.items-grid li span {
+    margin-top: 12px;
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color);
+}
+
+.items-grid li.selected {
+    background-color: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+/*Tira o clique na img e no nome como evento*/
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none; 
+}
