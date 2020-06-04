@@ -16,7 +16,7 @@
 
             <header>
                 <img src="/assets/logo.svg" alt="Logomarca"> <!--LOGO ECOLETA-->
-                <a href="#">
+                <a href="index.html">
                     <span></span>
                     Voltar para home
                 </a> <!-- LINK -->
@@ -26,26 +26,26 @@
 
                 <h1>Cadastro do ponto de coleta</h1>
 
-                <fieldset> <!--Agrupa dados da entidade e íntens de coleta-->
+                <fieldset> <!--Agrupa Dados da entidade-->
                     <legend>
                         <h2>Dados da entidade</h2>
                     </legend>
 
                     <div class="field"> <!--Criando os campos de preenchimento-->
                         <label for="name">Nome da entidade</label> <!--Nome do campo-->
-                        <input type="text" name="name"> <!--Entrada de dados-->
+                        <input type="text" name="name" required> <!--Entrada de dados-->
                     </div>
 
                     <div class="field-group"> <!--Agrupa os campos-->
                         
                         <div class="field">
-                            <label for="adress">Endereço</label>
-                            <input type="text" name="adress">
+                            <label for="address">Endereço</label>
+                            <input type="text" name="address" required>
                         </div>
 
                         <div class="field">
-                            <label for="adress2">Número/Complemento</label>
-                            <input type="text" name=adress2>
+                            <label for="address2">Número/Complemento</label>
+                            <input type="text" name="address2" required>
                         </div>
 
                     </div>
@@ -56,33 +56,66 @@
                         
                         <div class="field">
                             <label for="state">Estado</label>
-                            <select name="uf">
+                            <select name="uf" required>
                                 <option value="">Selecione o Estado</option>
                             </select>
-
                             
+                            <input type="hidden" name="state"> <!--Esconder o nome do estado-->
                         </div>
 
                         <div class="field">
                             <label for="city">Cidade</label>
                             <!--Só vai ser possível colocar a cidade depois do estado-->
-                            <select name="city" disabled> 
+                            <select name="city" disabled required> 
                                 <option value="">Selecione a Cidade</option>
                             </select>
 
-                            <input type="hidden" name="state"> <!--Esconder o nome do estado-->
                         </div>
                         
                     </div>
 
                 </fieldset>
 
-                <!-- <fieldset>
+                <fieldset> <!--Agrupa Ítens de coleta-->
                     <legend>
                         <h2>Ítens de coleta</h2>
                     </legend>
-                </fieldset> -->
-                <!--OI-->
+
+                    <div class="items-grid"> <!--Grade de itens-->
+                        <li data-id="1">
+                            <img src="/assets/lampadas.svg" alt="Lâmpadas">
+                            <span>Lâmpadas</span>
+                        </li>
+
+                        <li data-id="2">
+                            <img src="/assets/baterias.svg" alt="Pilhas e Baterias">
+                            <span>Pilhas e Baterias</span>
+                        </li>
+
+                        <li data-id="3">
+                            <img src="/assets/papeis-papelao.svg" alt="Papéis e Papelão">
+                            <span>Papéis e Papelão</span>
+                        </li>
+
+                        <li data-id="4">
+                            <img src="/assets/eletronicos.svg" alt="Resíduos Eletrônicos">
+                            <span>Resíduos Eletrônicos</span>
+                        </li>
+
+                        <li data-id="5">
+                            <img src="/assets/organicos.svg" alt="Resíduos Orgânicos">
+                            <span>Resíduos Orgânicos</span>
+                        </li>
+
+                        <li data-id="6">
+                            <img src="/assets/oleo.svg" alt="Óleo de Cozinha">
+                            <span>Óleo de Cozinha</span>
+                        </li>
+                    </div>
+
+                    <input type="hidden" name="items">
+
+                </fieldset>
 
                 <button type="submit">Cadastrar ponto de coleta</button>
             </form>
