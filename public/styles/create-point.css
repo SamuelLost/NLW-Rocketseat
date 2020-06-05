@@ -45,12 +45,25 @@ form fieldset {
     border: 0;
 }
 
+/*Selecione um ou mais itens*/
 form legend {
     margin-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100%;
 }
 
 form legend h2 {
     font-size: 24px;
+}
+
+/*Selecione um mais itens*/
+form legend span {
+    font-size: 14px;
+    color: var(--title-color);
 }
 
 form .field {
