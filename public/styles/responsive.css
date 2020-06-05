@@ -27,6 +27,16 @@
     #page-search-results .cards img {
         height: 200px;
     }
+
+    /*Mobile da parte de cadastro*/
+    #page-create-point .field-group {
+        flex-direction: column;
+
+    }
+
+    #page-create-point .field-group .field+.field {
+        margin-left: 0;
+    }
 }
 
 @media (min-width: 1700px) {
