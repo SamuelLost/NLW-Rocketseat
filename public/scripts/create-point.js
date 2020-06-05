@@ -78,6 +78,8 @@ function handleSelectedItem(event) {
     itemLi.classList.toggle("selected") //Possibilitar marcar vários
     const itemId = itemLi.dataset.id
 
+    // console.log('ITEM ID: ', itemId) //Debugger 
+    
     //Verificar se existem itens selecionados, se sim
     //pegar os selecionados
     const alreadySelected = selectedItems.findIndex( (item) => {
@@ -96,8 +98,8 @@ function handleSelectedItem(event) {
     }else {
         selectedItems.push(itemId) //Coloca um elemento dentro do array
     }
-
-    //console.log(selectedItems)
+    
+    // console.log('selectedItems: ',selectedItems)
     //atualizar o campo escondido com os itens selecionados 
     collectedItems.value = selectedItems
 }
